@@ -27,6 +27,7 @@ public class Pascals_triangle {
                 result.add(resultSet);
             }
 
+
             return result;
         }
     }
