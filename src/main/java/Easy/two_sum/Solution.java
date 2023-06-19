@@ -1,4 +1,4 @@
-package two_sum;
+package Easy.two_sum;
 
 public class Solution {
 
