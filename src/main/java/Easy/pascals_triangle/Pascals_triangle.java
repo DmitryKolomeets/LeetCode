@@ -1,4 +1,4 @@
-package pascals_triangle;
+package Easy.pascals_triangle;
 
 import java.util.ArrayList;
 import java.util.Arrays;

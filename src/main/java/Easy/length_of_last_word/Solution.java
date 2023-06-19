@@ -1,4 +1,4 @@
-package length_of_last_word;
+package Easy.length_of_last_word;
 
 public class Solution {
 
