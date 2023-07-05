@@ -19,7 +19,7 @@ public class Solution_Recursion {
 
     /* Driver program to test above function */
     public static void main(String args[]) {
-        int s = 4;
+        int s = 3;
         System.out.println("Number of ways = " + countWays(s));
 
 
