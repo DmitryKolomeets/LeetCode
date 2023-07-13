@@ -8,34 +8,6 @@ public class Solution {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         if(n==0) {
             return false;
         }
