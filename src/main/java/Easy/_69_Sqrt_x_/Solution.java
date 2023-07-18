@@ -3,19 +3,22 @@ package Easy._69_Sqrt_x_;
 public class Solution {
 
     public static int mySqrt(int x) {
+        int low = 1;
+        int high = x;
+        int res = 0;
 
-        if(x==0 || x==1) {
-            return x;
-        }
 
-            int i =1;
-            int result = 1;
+        while (low <= high) {
+            int middle = low + (high - low) / 2;
 
-            while (result <= x) {
-                i++;
-                result = i * i;
+            if (middle <= x / middle) { //  middle * middle = x
+                low = middle + 1;
+                res = middle;
+            } else {
+                high = middle - 1;
             }
-        return i-1;
+        }
+        return res;
 
     }
 
