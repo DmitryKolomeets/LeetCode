@@ -19,21 +19,23 @@ public class Solution {
             }
         }
 
-        int elementCount = 0;
-        int prevElement = nums[0];
+        int elemCounted = 1;
+        int prevElem = nums[0];
 
         for (int index = 1; index < nums.length; ++index) {
-            if (nums[index] != prevElement) {
-                elementCount += 1;
-                prevElement = nums[index];
+            // Current element is different from previous.
+            if (nums[index] != prevElem) {
+                elemCounted += 1;
+                prevElem = nums[index];
             }
 
-            if (elementCount == 3) {
+            // If we have counted 3 numbers then return current number.
+            if (elemCounted == 3) {
                 return nums[index];
             }
         }
 
-
+        // We never counted 3 distinct numbers, return largest number.
         return nums[0];
 
     }
