@@ -2,30 +2,34 @@ package Easy._35_Search_Insert_Position;
 
 public class Solution {
 
-    public static int searchInsert(int[] nums, int target) {
+    public static String addBinary(String a, String b) {
+        StringBuilder sb = new StringBuilder();
 
-        int start = 0;
-        int end = nums.length - 1;
+        int i = a.length()-1;
+        int j = b.length()-1;
+        int carry =0;
 
-        while (start <= end) {
-            int mid = (start + end) / 2;
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[mid] > target) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
-            }
 
+        while (i >= 0 || j >= 0) {
+            int sum = carry;
+            if(i>=0) sum += a.charAt(i) - '0';
+            if(j>=0) sum += b.charAt(j) - '0';
+            sb.append(sum%2);
+            carry = sum/2;
+
+            i--;
+            j--;
         }
-        return start;
+
+        if(carry !=0) sb.append(carry);
+        return sb.reverse().toString();
 
     }
 
 
     public static void main(String[] args) {
-        int[] array = {1, 3, 5, 6};
-        searchInsert(array, 2);
+        System.out.println(addBinary("11", "1"));
+
 
     }
 }
