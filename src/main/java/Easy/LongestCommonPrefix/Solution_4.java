@@ -8,6 +8,8 @@ public class Solution_4 {
 
         String[] array = {"Норд", "Булка", "Букварь", "Нора", "Борис", "Ария", "Носок", "Блоха"};
 
+        System.out.println("result");
+
        Arrays.sort(array);
 
         System.out.println(Arrays.toString(array));
